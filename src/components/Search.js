@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Search() {
+function Search({setSearch}) {
+
+  const handleChange = (e) => {
+    setSearch(e.target.value)
+  }
+
   return (
-    <div className="ui search">
+    <div onChange={handleChange} className="ui search">
       <div className="ui icon input">
         <input className="prompt" />
         <i className="search icon" />
